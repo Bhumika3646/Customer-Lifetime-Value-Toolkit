@@ -1,0 +1,14 @@
+STATUS / OUTCOME LEAKAGE CHECK
+================================
+
+Changes made in this revision:
+- Added defensive exclusions for status, subscription_status, reason, churn_reason, end_date, and churn_date to the fixed-snapshot model input selector.
+- Excluded status and reason fields from the fixed temporal holdout revenue comparison (20_compare_revenue_baselines.py).
+- Excluded status and reason fields from the monthly-only XGBoost feature-importance audit (21_audit_xgboost_features.py).
+- Regenerated revenue_baseline_comparison.csv, xgboost_feature_importance.csv, and xgboost_feature_availability_audit.csv after the exclusions.
+
+Interpretation:
+The previous xgboost_feature_importance.csv assigned importance to status; that feature should not have been used because final subscription status may reveal outcome information unavailable at the prediction cutoff. The revised feature-importance output must be used instead.
+
+Caution:
+These changes address the identified feature leakage paths. They do not make the synthetic dataset representative of real subscription businesses, and they do not turn 90-day future revenue into true lifetime value. Review other data-generation assumptions separately.

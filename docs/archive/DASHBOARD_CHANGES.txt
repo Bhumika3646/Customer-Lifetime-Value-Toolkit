@@ -1,0 +1,51 @@
+Dashboard changes
+=================
+
+1. Revenue Forecast now states that its saved predictions cover the monthly-plan
+   cohort in the 2025 test snapshot (cutoff 2025-06-30; target horizon ends
+   2025-09-28), and clarifies that this is 90-day recorded successful-payment
+   revenue, not total lifetime value or profit.
+
+2. Model Evaluation now labels rolling temporal validation separately from the
+   fixed temporal holdout comparison. The fixed-holdout caption identifies the
+   monthly-only 2024-to-2025 setup and explains that its XGBoost pipeline differs
+   from the one used for the Revenue Forecast page.
+
+3. Metric definitions, the number of rolling test windows, customer overlap,
+   the synthetic-data limitation, and the missing 2025 annual-plan payment/invoice
+   limitation are stated more clearly.
+
+Validation
+==========
+app.py passes Python syntax compilation (py_compile). Streamlit is not installed
+in the editing environment, so the interactive dashboard was not launched here.
+
+Run from this project directory with:
+    python -m streamlit run app.py
+
+4. Status/outcome leakage correction (2026-10-20)
+   The fixed temporal holdout comparison and monthly-only XGBoost feature audit
+   now exclude final subscription status, subscription_status, reason, and
+   churn_reason. The general fixed-snapshot model script also excludes these
+   fields defensively if they appear in a future snapshot. The output files
+   revenue_baseline_comparison.csv, xgboost_feature_importance.csv, and
+   xgboost_feature_availability_audit.csv were regenerated after this correction.
+   The earlier feature-importance file included status and should not be used.
+
+   Recomputed fixed temporal holdout (monthly plans):
+   XGBoost MAE 7.4556, RMSE 20.5185, R2 0.9110.
+   Three-month plan-price baseline MAE 8.2345, RMSE 24.4174, R2 0.8739.
+
+   Recomputed monthly-only XGBoost audit: MAE 7.3699, RMSE 20.3883, R2 0.9121.
+   Feature importance now ranks revenue_60d and plan_price_at_cutoff highest;
+   status is not present in the model's feature list or importance output.
+
+5. CLV report/dashboard interpretation fixes
+   - The billing-cycle statement is scoped to churned paid monthly subscriptions and presented as an assumption for cash-flow timing, not a proven rule for annual plans.
+   - The CLV segment count is labelled positive_clv_customers (estimated CLV > 0), not paying customers.
+   - Annual-plan CLV and the combined portfolio estimate are flagged as provisional because annual renewal payments are missing from 2025.
+   - Customer-attribute CLV comparisons are explicitly described as unadjusted descriptive summaries.
+   - The warning for active paid-plan subscriptions without billing records explains that zeroing these records may understate value if history is incomplete.
+   - Deprecated paying-style labels were removed from CLV figures and report text where they implied verified payment history.
+
+Regenerate the report and CLV outputs with `python run_pipeline.py`, run `python -m pytest -q`, then launch `python -m streamlit run app.py`.
