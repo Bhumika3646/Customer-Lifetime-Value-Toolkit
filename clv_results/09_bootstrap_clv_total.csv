@@ -1,0 +1,3 @@
+quantity,point_estimate,ci_low,ci_high,relative_half_width_pct,replicates
+Portfolio 36-month CLV - confidence interval (estimation uncertainty),4345883.451633924,4196202.919654347,4463063.169058026,3.070264681204776,200
+Portfolio 36-month revenue - predictive interval (estimation + random churn/payments),4345883.451633924,4192831.570171731,4488091.513185714,3.397007148258593,2000

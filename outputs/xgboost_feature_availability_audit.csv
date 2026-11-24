@@ -1,0 +1,19 @@
+feature,data_type,training_non_null_pct,test_non_null_pct,availability_review
+company_size,object,100.0,100.0,CHECK source and cutoff availability
+industry,object,100.0,100.0,CHECK source and cutoff availability
+acquisition_channel,object,100.0,100.0,CHECK source and cutoff availability
+country,object,100.0,100.0,CHECK source and cutoff availability
+plan_name_at_cutoff,object,100.0,100.0,CHECK source and cutoff availability
+billing_period_at_cutoff,object,100.0,100.0,CHECK feature construction and cutoff
+plan_price_at_cutoff,float64,100.0,100.0,CHECK feature construction and cutoff
+tenure_days,int64,100.0,100.0,CHECK feature construction and cutoff
+subscription_age_days,int64,100.0,100.0,CHECK feature construction and cutoff
+historical_successful_payment_count,float64,100.0,100.0,CHECK feature construction and cutoff
+historical_successful_revenue,float64,100.0,100.0,CHECK feature construction and cutoff
+payment_count_30d,float64,100.0,100.0,CHECK feature construction and cutoff
+revenue_30d,float64,100.0,100.0,CHECK feature construction and cutoff
+payment_count_60d,float64,100.0,100.0,CHECK feature construction and cutoff
+revenue_60d,float64,100.0,100.0,CHECK feature construction and cutoff
+payment_count_90d,float64,100.0,100.0,CHECK feature construction and cutoff
+revenue_90d,float64,100.0,100.0,CHECK feature construction and cutoff
+days_since_last_successful_payment,float64,33.38,33.7,CHECK source and cutoff availability

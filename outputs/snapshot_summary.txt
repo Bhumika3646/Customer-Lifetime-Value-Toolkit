@@ -1,0 +1,17 @@
+CUSTOMER SNAPSHOT SUMMARY
+===================================
+Snapshot cutoff: 2025-06-30
+Future target window: 2025-07-01 through 2025-09-28 (inclusive)
+Eligible customers at cutoff (not already churned): 12,266
+Customers with churn label 1 in next 90 days: 1,324
+Customers with churn label 0 in next 90 days: 10,942
+Mean future 90-day successful-payment revenue: 27.72
+Median future 90-day successful-payment revenue: 0.00
+Share with zero future 90-day successful-payment revenue: 74.09%
+
+Important limitations:
+- Targets are based on successful payments only, not invoice status.
+- This is one fixed-cutoff baseline snapshot; later work should test additional cutoffs if the available timeline permits.
+- Features must exclude customer_id/subscription_id, target columns, and all post-cutoff information.
+- Column names are inferred from headerless CSVs and must be verified against Kaggle documentation.
+- Dataset is synthetic; performance does not establish real-world validity.

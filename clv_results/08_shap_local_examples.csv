@@ -1,0 +1,81 @@
+task,example_number,source_feature,feature_value,shap_value,interpretation_scale
+90-day revenue / CLV proxy,1,plan_name,basic,-45.253265380859375,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,plan_price,19.0,-3.129894256591797,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,revenue_60d,38.0,-1.315354347229004,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,industry,health,0.3578919470310211,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,hist_success_count,13.0,-0.27827727794647217,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,revenue_90d,57.0,-0.23497436940670013,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,revenue_delta_30d_vs_prev30d,0.0,-0.18735317885875702,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,1,company_size,medium,0.18275654315948486,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,plan_name,basic,-44.58762741088867,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,plan_price,19.0,-3.1252732276916504,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,revenue_60d,38.0,-1.1522104740142822,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,industry,retail,-0.5482228994369507,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,tenure_days,57,-0.3322547376155853,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,hist_success_revenue,38.0,-0.23924197256565094,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,revenue_90d,38.0,-0.2124238908290863,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,2,revenue_delta_30d_vs_days61_90,19.0,-0.17980343103408813,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,plan_name,basic,-45.481689453125,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,plan_price,19.0,-3.1378002166748047,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,revenue_60d,19.0,-1.2958791255950928,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,pay_count_60d,1.0,0.2797749936580658,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,country,germany,0.24489286541938782,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,revenue_90d,38.0,-0.1999412477016449,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,revenue_delta_30d_vs_prev30d,19.0,-0.18695667386054993,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,3,hist_success_revenue,171.0,-0.15822695195674896,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,plan_name,basic,-43.75725555419922,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,hist_success_count,27.0,-2.678633213043213,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,plan_price,19.0,-2.6214723587036133,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,revenue_60d,38.0,-1.6012204885482788,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,tenure_days,890,0.9619789123535156,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,hist_success_revenue,513.0,-0.4347589313983917,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,hist_failed_count,3.0,0.27317026257514954,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,4,country,germany,0.27065446972846985,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,plan_name,basic,-44.69663619995117,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,plan_price,19.0,-3.200638771057129,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,revenue_60d,19.0,-1.1671708822250366,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,industry,retail,-0.5564317107200623,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,revenue_90d,19.0,-0.31370070576667786,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,hist_success_revenue,19.0,-0.2813359797000885,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,pay_count_60d,1.0,0.2797749936580658,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+90-day revenue / CLV proxy,5,hist_success_count,1.0,0.22418469190597534,"90-day future revenue prediction units; SHAP explains the supervised revenue proxy, not the survival CLV calculation directly."
+3-month churn risk,1,billing_period,annual,-2.3777687549591064,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,plan_price,190.0,-1.0170179605484009,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,days_since_last_success,182.0,-0.8283684849739075,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,tenure_days,548,0.021214358508586884,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,country,germany,-0.02083822526037693,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,pay_count_60d,0.0,0.010690663009881973,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,hist_success_count,2.0,-0.01022152416408062,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,1,revenue_60d,0.0,0.008533512242138386,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,plan_price,0.0,0.16022630035877228,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,billing_period,monthly,0.13470222055912018,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,country,uk,-0.028711309656500816,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,tenure_days,503,0.027716228738427162,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,revenue_60d,0.0,0.016779128462076187,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,pay_count_60d,0.0,0.014834137633442879,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,plan_name,free,0.01200940739363432,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,2,revenue_90d,0.0,0.007284868508577347,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,plan_price,0.0,0.155414417386055,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,billing_period,monthly,0.13691826164722443,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,tenure_days,31,0.07970508188009262,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,industry,retail,-0.02144017443060875,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,revenue_60d,0.0,0.016102652996778488,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,country,uk,-0.016012979671359062,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,pay_count_60d,0.0,0.01572096161544323,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,3,plan_name,free,0.012316575273871422,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,plan_price,49.0,-0.34590888023376465,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,billing_period,monthly,0.20113015174865723,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,revenue_60d,98.0,-0.12578386068344116,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,plan_name,pro,-0.08359327912330627,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,revenue_90d,147.0,-0.07986395061016083,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,revenue_days61_90,49.0,-0.037686921656131744,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,pay_count_60d,2.0,-0.023299792781472206,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,4,failed_count_60d,0.0,0.01203325018286705,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,plan_price,0.0,0.16132678091526031,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,billing_period,monthly,0.13474570214748383,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,revenue_60d,0.0,0.01716464012861252,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,pay_count_60d,0.0,0.014834137633442879,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,plan_name,free,0.012908094562590122,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,revenue_90d,0.0,0.007284868508577347,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,industry,finance,-0.006706418469548225,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.
+3-month churn risk,5,tenure_days,474,-0.005778314080089331,Log-odds contribution for the supervised 3-month churn classifier; not a direct probability change.

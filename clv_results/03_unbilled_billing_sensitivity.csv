@@ -1,0 +1,4 @@
+scenario,flagged_paid_plan_subscriptions,payment_success_assumption,estimated_clv_for_flagged_cohort,portfolio_total_clv_scenario,change_vs_conservative_pct
+Conservative: no billing evidence -> zero CLV,2786,No billing record; assigned zero,0.0,4345883.451633924,0.0
+Sensitivity: potentially billable at observed billing-period success rates,2786,Observed monthly/annual payment success rates,1869039.8358427365,6214923.287476661,43.00713207437795
+Stress case: potentially billable with 100% payment success,2786,100% success; intentionally optimistic stress case,2014027.1372655919,6359910.588899516,46.34333064105475

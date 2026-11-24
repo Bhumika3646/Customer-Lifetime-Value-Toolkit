@@ -1,0 +1,2 @@
+selected_model,test_MAE,test_RMSE,test_R2,train_rows,test_rows,train_zero_target_pct,test_zero_target_pct,train_mean_revenue,test_mean_revenue
+XGBoost,7.2488300864880095,18.741917077621306,0.9257281004859789,5461,9709,67.5517304522981,67.267483777938,32.36275407434536,35.02368936038727

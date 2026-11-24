@@ -1,0 +1,2 @@
+selected_model,test_MAE,test_RMSE,test_R2,train_rows,test_rows
+Random Forest,19.57654195764039,70.78301671606424,-0.2697378787158049,6687,12266

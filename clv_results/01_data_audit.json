@@ -1,0 +1,31 @@
+{
+  "rows": {
+    "customers": 25000,
+    "subscriptions": 25000,
+    "invoices": 68411,
+    "payments": 68411,
+    "plans": 7,
+    "churn": 9757,
+    "changes": 787
+  },
+  "one_subscription_per_customer": true,
+  "all_subscription_customers_exist": true,
+  "all_payment_subscriptions_exist": true,
+  "churn_events_match_churned_subscriptions": true,
+  "end_date_equals_churn_event_date": true,
+  "invoice_amount_equals_payment_amount": true,
+  "invoices_all_marked_paid": true,
+  "payment_failure_rate": 0.0701203022905673,
+  "failed_payments_on_paid_invoices": 4797,
+  "share_free_plan": 0.56748,
+  "share_churned": 0.39028,
+  "last_payment_date": "2025-11-30",
+  "annual_payments_by_year": {
+    "2023": 675,
+    "2024": 1765
+  },
+  "days_between_last_payment_and_churn_date_mean": 30.44001626677511,
+  "days_between_last_payment_and_churn_date_min": 28.0,
+  "successful_payment_rows": 63614,
+  "is_synthetic_warning": "Dataset appears synthetic (near-uniform categorical fields, plan changes only Free->Basic). Findings do not establish real-world validity."
+}

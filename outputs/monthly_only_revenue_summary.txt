@@ -1,0 +1,29 @@
+MONTHLY-ONLY REVENUE SENSITIVITY ANALYSIS
+============================================================
+Training cutoff: 2024-06-30
+Training target horizon ends: 2024-09-28
+Test cutoff: 2025-06-30
+Test target horizon ends: 2025-09-28
+
+Original training rows: 6687
+Monthly training rows: 5461
+Original test rows: 12266
+Monthly test rows: 9709
+
+Target: successful-payment revenue recorded during the 90 days after each cutoff. This is a short-term revenue proxy, not true customer lifetime value or profit.
+
+Only customers classified as monthly at the relevant snapshot cutoff are included. Validation is a random holdout from the 2024 monthly snapshot. The 2025 monthly snapshot is reserved for final evaluation.
+
+The original dataset's annual-payment records are absent from 2025. This monthly-only analysis checks sensitivity to that limitation but does not establish real-world generalization. The dataset appears synthetic.
+
+VALIDATION RESULTS
+            model  validation_MAE  validation_RMSE  validation_R2
+          XGBoost        6.633019        17.976891       0.922723
+    Random Forest        6.655535        18.138640       0.921327
+Gradient Boosting        7.338182        18.486321       0.918282
+Linear Regression        7.767379        20.163002       0.902786
+    Mean Baseline       44.602944        64.696637      -0.000879
+
+FINAL TEST RESULTS
+selected_model  test_MAE  test_RMSE  test_R2  train_rows  test_rows  train_zero_target_pct  test_zero_target_pct  train_mean_revenue  test_mean_revenue
+       XGBoost   7.24883  18.741917 0.925728        5461       9709               67.55173             67.267484           32.362754          35.023689

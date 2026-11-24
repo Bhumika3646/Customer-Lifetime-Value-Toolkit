@@ -1,0 +1,136 @@
+CUSTOMER LIFETIME VALUE PROJECT — DATASET AUDIT
+=======================================================
+ZIP file: archive (8).zip
+Important: CSV column names were assigned by this script because the files are headerless.
+Confirm inferred column names with the original Kaggle documentation before publication.
+
+[customers.csv]
+Rows: 25,000 | Columns: 6
+Columns: customer_id, signup_date, company_size, industry, acquisition_channel, country
+Duplicate full rows: 0
+Missing values: {}
+signup_date range: 2023-01-01 to 2025-12-31
+company_size value counts: {'small': 8444, 'medium': 8348, 'large': 8208}
+industry value counts: {'tech': 6352, 'retail': 6265, 'finance': 6214, 'health': 6169}
+acquisition_channel value counts: {'organic': 8418, 'ads': 8341, 'referral': 8241}
+country value counts: {'Germany': 6334, 'US': 6278, 'India': 6224, 'UK': 6164}
+Sample rows:
+ customer_id signup_date company_size industry acquisition_channel country
+           1  2023-05-11       medium  finance            referral Germany
+           2  2023-04-25        large   health            referral      US
+           3  2023-03-18        large   retail             organic Germany
+
+[subscriptions.csv]
+Rows: 25,000 | Columns: 6
+Columns: subscription_id, customer_id, start_date, end_date, status, plan_id
+Duplicate full rows: 0
+Missing values: {'end_date': 15243}
+start_date range: 2023-01-01 to 2025-12-31
+end_date range: 2023-02-01 to 2025-12-30
+status value counts: {'active': 15243, 'churned': 9757}
+plan_id value counts: {1: 14187, 2: 4867, 5: 2129, 3: 1654, 6: 920, 4: 785, 7: 458}
+Sample rows:
+ subscription_id  customer_id start_date end_date status  plan_id
+               1            1 2023-05-11      NaT active        5
+               3            3 2023-03-18      NaT active        1
+               9            9 2023-10-13      NaT active        6
+
+[invoices.csv]
+Rows: 68,411 | Columns: 6
+Columns: invoice_id, subscription_id, invoice_date, due_date, amount, status
+Duplicate full rows: 0
+Missing values: {}
+invoice_date range: 2023-01-01 to 2025-11-30
+due_date range: 2023-02-01 to 2025-12-31
+amount value counts: {19.0: 38358, 49.0: 18436, 99.0: 9177, 190.0: 1472, 490.0: 633, 990.0: 335}
+status value counts: {'paid': 68411}
+Sample rows:
+ invoice_id  subscription_id invoice_date   due_date  amount status
+          1                1   2023-05-11 2024-05-11   190.0   paid
+          2                1   2024-05-11 2025-05-11   190.0   paid
+          3                9   2023-10-13 2024-10-13   490.0   paid
+
+[payments.csv]
+Rows: 68,411 | Columns: 6
+Columns: payment_id, subscription_id, payment_date, amount, status, extra_blank
+Duplicate full rows: 0
+Missing values: {'extra_blank': 68411}
+payment_date range: 2023-01-01 to 2025-11-30
+amount value counts: {19.0: 38358, 49.0: 18436, 99.0: 9177, 190.0: 1472, 490.0: 633, 990.0: 335}
+status value counts: {'successful': 63614, 'failed': 4797}
+extra_blank value counts: {nan: 68411}
+Sample rows:
+ payment_id  subscription_id payment_date  amount     status  extra_blank
+          1                1   2023-05-11   190.0 successful          NaN
+          2                1   2024-05-11   190.0 successful          NaN
+          3                9   2023-10-13   490.0 successful          NaN
+
+[subscription_plans.csv]
+Rows: 7 | Columns: 4
+Columns: plan_id, plan_name, billing_period, price
+Duplicate full rows: 0
+Missing values: {}
+plan_id value counts: {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+plan_name value counts: {'Basic': 2, 'Pro': 2, 'Premium': 2, 'Free': 1}
+billing_period value counts: {'monthly': 4, 'annual': 3}
+price value counts: {0.0: 1, 19.0: 1, 49.0: 1, 99.0: 1, 190.0: 1, 490.0: 1, 990.0: 1}
+Sample rows:
+ plan_id plan_name billing_period  price
+       1      Free        monthly    0.0
+       2     Basic        monthly   19.0
+       3       Pro        monthly   49.0
+
+[Churn_events.csv]
+Rows: 9,757 | Columns: 4
+Columns: event_id, customer_id, churn_date, reason
+Duplicate full rows: 0
+Missing values: {}
+churn_date range: 2023-02-01 to 2025-12-30
+reason value counts: {'product_fit': 2038, 'other': 1987, 'budget': 1937, 'price': 1932, 'competitor': 1863}
+Sample rows:
+ event_id  customer_id churn_date reason
+        1            2 2023-11-25  other
+        2            4 2023-10-08  price
+        3            5 2023-11-28 budget
+
+[plan_chnages.csv]
+Rows: 787 | Columns: 5
+Columns: change_id, subscription_id, old_plan_id, new_plan_id, change_date
+Duplicate full rows: 0
+Missing values: {}
+change_date range: 2023-02-21 to 2025-12-29
+old_plan_id value counts: {1: 787}
+new_plan_id value counts: {2: 787}
+Sample rows:
+ change_id  subscription_id  old_plan_id  new_plan_id change_date
+         1               23            1            2  2023-08-27
+         2               30            1            2  2023-09-25
+         3               42            1            2  2024-06-17
+
+[RELATIONSHIP / CONSISTENCY CHECKS]
+Subscription customer IDs found in customers: 25,000/25,000
+Subscription plan IDs found in plans: 25,000/25,000
+Invoice subscription IDs found in subscriptions: 68,411/68,411
+Payment subscription IDs found in subscriptions: 68,411/68,411
+Churn-event customer IDs found in customers: 9,757/9,757
+Plan-change subscription IDs found in subscriptions: 787/787
+Unique customers: 25,000
+Unique subscriptions: 25,000
+Subscription ID equals customer ID for all rows: True
+Subscription status counts: {'active': 15243, 'churned': 9757}
+Invoice status counts: {'paid': 68411}
+Payment status counts: {'successful': 63614, 'failed': 4797}
+Churn event count: 9,757
+Churned subscriptions: 9,757
+Churned subscriptions with a matching churn event: 9,757
+Invoice amount equals payment amount row-by-row: True
+Invoice ID equals payment ID row-by-row: True
+Invoice subscription ID equals payment subscription ID row-by-row: True
+All invoice statuses: ['paid']
+
+[WARNINGS TO RESOLVE BEFORE MODELING]
+1. All invoice rows are marked paid, but some corresponding payment rows are failed. Investigate this inconsistency.
+2. Subscription status and churn-event details appear to directly encode the churn outcome. Do not use status, end_date, churn_date, or churn reason as pre-churn predictors.
+3. If the project claims future CLV prediction, define a prediction cutoff and future target window; use only data available before that cutoff as features.
+4. The dataset appears synthetic based on the identified Kaggle source; state this limitation clearly in the report.
+5. The column names above are inferred from the data layout and should be checked against the dataset documentation.

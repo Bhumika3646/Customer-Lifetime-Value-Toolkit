@@ -1,0 +1,34 @@
+MODEL TRAINING SUMMARY
+============================================================
+
+Snapshot rows: 12266
+Features used: 19
+Training rows: 9812
+Testing rows: 2454
+Split: random 80/20 split stratified by churn target. This is not temporal validation.
+
+REGRESSION RESULTS
+            model       MAE      RMSE        R2
+          XGBoost  5.753099 17.461611  0.918925
+    Random Forest  5.759963 17.752697  0.916199
+Linear Regression  5.914665 17.279844  0.920604
+Gradient Boosting  6.219498 17.419282  0.919318
+    Mean Baseline 40.691686 61.327005 -0.000051
+
+CHURN CLASSIFICATION RESULTS
+              model  Accuracy  Precision   Recall       F1  ROC_AUC
+            XGBoost  0.482478   0.157464 0.871698 0.266744 0.675342
+Logistic Regression  0.455583   0.156069 0.916981 0.266740 0.669639
+      Random Forest  0.817033   0.164234 0.169811 0.166976 0.647336
+  Majority Baseline  0.892013   0.000000 0.000000 0.000000 0.500000
+  Gradient Boosting  0.892013   0.000000 0.000000 0.000000 0.686485
+
+Best regression model by MAE: XGBoost
+Best churn model by F1: XGBoost
+
+Limitations:
+- The dataset is synthetic.
+- Evaluation uses one fixed-cutoff snapshot and a random split.
+- Performance across future dates has not been established.
+- Future 90-day successful-payment revenue is a short-term customer-value proxy, not lifetime profit.
+- Model comparisons on this test set are preliminary; use a separate validation strategy for final model selection.

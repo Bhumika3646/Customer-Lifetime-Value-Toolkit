@@ -1,0 +1,7 @@
+value_risk_segment,customers,total_estimated_clv_36m,mean_estimated_clv_36m,mean_estimated_12m_churn_risk,flagged_billing_records,recommended_action
+Billing data review,2786,0.0,0.0,0.17724377055093257,2786,Verify billing history and plan-change records before assigning a retention priority.
+Free plan (conversion candidates),6988,0.0,0.0,0.5158042316737408,0,No revenue at risk; focus on onboarding and upgrade nudges. CLV is zero by construction (no conversion model).
+High value / high risk,638,595139.7702324132,932.8209564771366,0.2767901365996507,0,Prioritize proactive retention outreach; review recent payment failures and engagement decline before choosing an incentive.
+High value / lower risk,2097,2902524.8416259615,1384.132017942757,0.12578278223058703,0,"Protect the relationship with renewal reminders, service-quality monitoring, and relevant loyalty engagement."
+Lower value / high risk,2097,578492.0602760745,275.86650466193345,0.42993131536570445,0,Use cost-effective self-service support and investigate billing or engagement issues before offering incentives.
+Lower value / lower risk,637,269726.77949947433,423.4329348500382,0.03928076805721502,0,Use standard engagement and reassess the segment when payment or usage behaviour changes.

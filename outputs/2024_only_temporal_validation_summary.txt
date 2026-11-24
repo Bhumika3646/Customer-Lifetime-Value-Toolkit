@@ -1,0 +1,51 @@
+TEMPORAL VALIDATION SUMMARY
+=================================================================
+Training cutoff: 2023-12-31
+Training target window ends: 2024-03-30
+Test cutoff: 2024-06-30
+Test target window ends: 2024-09-28
+Training snapshot rows: 3949
+Test snapshot rows: 6687
+Shared customer IDs: 3071
+Number of features: 18
+Fit rows: 3159
+Validation rows: 790
+
+Revenue target: total successful-payment revenue in the 90 days after the cutoff. This is a short-term revenue proxy, not true lifetime value or profit.
+
+Churn target: a recorded churn event after the cutoff and on or before the 90-day horizon.
+
+Customers with a recorded churn event on/before the cutoff are excluded from that snapshot.
+
+Validation method: random holdout from the training snapshot. The final 2024 snapshot is not used for model selection. Customers may appear in both snapshots, so this is temporal evaluation rather than customer-independent evaluation.
+
+Dataset limitation: annual-plan invoice/payment records may be absent in 2025. This can distort future revenue targets and limits the interpretation of model performance. The dataset appears synthetic and should not be treated as evidence of real-world generalization.
+
+REGRESSION VALIDATION RESULTS
+-----------------------------------------------------------------
+            model  validation_MAE  validation_RMSE  validation_R2
+Linear Regression       24.059977        67.518563       0.620967
+    Random Forest        9.042790        28.253981       0.933627
+Gradient Boosting       13.472095        30.933381       0.920442
+          XGBoost        9.257857        25.685278       0.945147
+
+
+REGRESSION FINAL TEST RESULTS
+-----------------------------------------------------------------
+selected_model  test_MAE  test_RMSE  test_R2  train_rows  test_rows
+ Random Forest 17.030049  62.322842  0.46642        3949       6687
+
+
+CHURN VALIDATION RESULTS
+-----------------------------------------------------------------
+              model  threshold  validation_F1  validation_precision  validation_recall
+Logistic Regression       0.40       0.294498              0.174330           0.947917
+      Random Forest       0.10       0.280757              0.165428           0.927083
+  Gradient Boosting       0.15       0.301653              0.188144           0.760417
+            XGBoost       0.50       0.303502              0.186603           0.812500
+
+
+CHURN FINAL TEST RESULTS
+-----------------------------------------------------------------
+selected_model  threshold  accuracy  precision   recall       F1  ROC_AUC  train_rows  test_rows
+       XGBoost        0.5  0.516226   0.157313 0.752646 0.260233 0.648479        3949       6687
